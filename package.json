@@ -1,0 +1,31 @@
+{
+  "name": "mail-reader",
+  "version": "1.0.0",
+  "description": "Robust Express + ImapFlow API server for Gmail unread status and ESP32 integration",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "express",
+    "imap",
+    "gmail",
+    "esp32",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "imapflow": "^1.0.18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.0",
+    "globals": "^15.15.0"
+  }
+}
