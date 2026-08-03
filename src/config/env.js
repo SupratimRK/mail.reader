@@ -19,9 +19,10 @@ function validateEnv() {
   const missing = [];
   if (!process.env.IMAP_USER) missing.push('IMAP_USER');
   if (!process.env.IMAP_PASS) missing.push('IMAP_PASS');
+  if (!process.env.API_KEY) missing.push('API_KEY');
 
   if (missing.length > 0) {
-    console.warn(`[Config Warning] Missing required environment variables: ${missing.join(', ')}`);
+    console.warn(`[Config Warning] Missing recommended environment variables: ${missing.join(', ')}`);
   }
 }
 
@@ -29,6 +30,7 @@ validateEnv();
 
 const config = {
   port: parseInt(process.env.PORT || '3000', 10),
+  apiKey: process.env.API_KEY || '',
   imapHost: process.env.IMAP_HOST || 'imap.gmail.com',
   imapPort: parseInt(process.env.IMAP_PORT || '993', 10),
   imapSecure: process.env.IMAP_SECURE !== 'false',
